@@ -1,0 +1,49 @@
+{:ident :marketplaceident
+    :data [
+        
+    [[:im.listing/id #uuid "63e6950a-75ce-4248-a42b-be6774c5361f" :listing/Spotler]
+    #:im.listing{:createdAt #inst "2021-05-21T12:41:48.436+01:00"
+                 :marketplace "Spotler"
+                 :website "https://marketplace.adzooma.com/categories/spotler.html"
+                 :scoreavg 0.0
+
+   [[:im.user/id :user/john198S63X5DP]
+    #:im.user{:createdAt #inst "30cb0116-2f8a-49b8-ac59-b3d9d342847c"
+              :primaryEmail {:im.email/address "john@spotler.com"
+                             :im.email/verified false}
+              :profile {:im.userProfile/firstName "john"
+                        :im.userProfile/lastName "smith"
+                        :im.userProfile/displayName "john smith"
+              :role [:user.role/provider]}]
+       
+    [[:im.listing/id #uuid "01cd98e2-c857-4a9c-b579-612bbe19ba5d" :listing/Phable]
+    #:im.listing{:createdAt #inst "2021-05-21T12:41:48.438+01:00"
+                 :marketplace "Phable"
+                 :website "https://marketplace.adzooma.com/categories/phable.html"
+                 :scoreavg 5.0
+
+   [[:im.user/id :user/sven3OZOSTLCL8]
+    #:im.user{:createdAt #inst "d8e74717-c7b7-4f73-bca9-af98e50a85e9"
+              :primaryEmail {:im.email/address "sven@phable.com"
+                             :im.email/verified false}
+              :profile {:im.userProfile/firstName "sven"
+                        :im.userProfile/lastName "eriksson"
+                        :im.userProfile/displayName "sven eriksson"
+              :role [:user.role/provider]}]
+       
+    [[:im.listing/id #uuid "ce8ffb11-d1ee-4d49-b738-dda182eeb736" :listing/Archant]
+    #:im.listing{:createdAt #inst "2021-05-21T12:41:48.438+01:00"
+                 :marketplace "Archant"
+                 :website "https://marketplace.adzooma.com/categories/archant.html"
+                 :scoreavg 0.0
+
+   [[:im.user/id :user/ivan4G6DCPJLPL]
+    #:im.user{:createdAt #inst "77c49247-0a2a-48c9-8d09-2f8452cff81f"
+              :primaryEmail {:im.email/address "ivan@archant.com"
+                             :im.email/verified false}
+              :profile {:im.userProfile/firstName "ivan"
+                        :im.userProfile/lastName "ratikic"
+                        :im.userProfile/displayName "ivan ratikic"
+              :role [:user.role/provider]}]
+      
+    ]}
