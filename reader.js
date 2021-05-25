@@ -34,7 +34,7 @@ function outputFile(contents) {
 
   ednRows.map((item) => {
     const RFC_3339 = "YYYY-MM-DDTHH:mm:ss";
-    const timestamp = moment().format(RFC_3339 + "+00:00");
+    const timestamp = moment().format(RFC_3339 + "-00:00");
     const user = `${item.USER}${makeId(10)}`;
 
     ednDataStrings = [
