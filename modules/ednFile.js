@@ -1,8 +1,8 @@
 const fs = require("fs");
-const { fileWriteMsg } = require("../config/settings");
+const { fileWriteMsg, outputFileName } = require("../config/settings");
 
-const ednFile = (filename, ednTemplate) => {
-  fs.writeFile(filename, ednTemplate, function (err) {
+const ednFile = (ednTemplate) => {
+  fs.writeFile(outputFileName, ednTemplate, function (err) {
     if (err) return console.log(err);
     console.log(fileWriteMsg);
   });

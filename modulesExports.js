@@ -3,6 +3,7 @@ const model = require("./modules/model");
 const ednTemplate = require("./modules/ednTemplate");
 const ednFile = require("./modules/ednFile");
 const csvReader = require("./modules/csvReader");
+const converter = require("./modules/converter");
 
 module.exports = {
   ednRow,
@@ -10,4 +11,5 @@ module.exports = {
   ednTemplate,
   ednFile,
   csvReader,
+  converter,
 };
