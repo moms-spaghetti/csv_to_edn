@@ -21,6 +21,7 @@ function outputFile(contents) {
       ...ednRows,
       {
         MARKETPLACE: item.MARKETPLACE,
+        TITLE: item.TITLE,
         WEBSITE: item.WEBSITE,
         SCOREAVG: item.SCOREAVG,
         USER: item.USER,
@@ -34,32 +35,36 @@ function outputFile(contents) {
   ednRows.map((item) => {
     const timestamp = moment().toISOString(true);
     const user = `${item.USER}${makeId(10)}`;
-    const userEmailVerified = false;
 
     ednDataStrings = [
       ...ednDataStrings,
       `
     [[:im.listing/id #uuid "${uuidv4()}" :listing/${item.MARKETPLACE}]
     #:im.listing{:createdAt #inst "${timestamp}"
-                 :marketplace "${item.MARKETPLACE}"
-                 :website "${item.WEBSITE}"
-                 :scoreavg ${item.SCOREAVG}
+                 :closed false
+                 :title "${item.TITLE}"
+                 :publicData {:marketplace "${item.MARKETPLACE}"
+                              :website "${item.WEBSITE}"
+                              :scoreavg ${item.SCOREAVG}}
+                 :author #im/ref :user/${user}}]
 
    [[:im.user/id :user/${user}]
     #:im.user{:createdAt #inst "${timestamp}"
               :primaryEmail {:im.email/address "${item.USEREMAIL}"
-                             :im.email/verified ${userEmailVerified}}
+                             :im.email/verified false}
               :profile {:im.userProfile/firstName "${item.FIRSTNAME}"
                         :im.userProfile/lastName "${item.LASTNAME}"
                         :im.userProfile/displayName "${item.FIRSTNAME} ${
         item.LASTNAME
-      }"
-              :role [:user.role/provider]}]
+      }"}
+              :role [:user.role/customer :user.role/provider]}]
       `,
     ];
   });
 
-  const ednTemplate = `{:ident :marketplaceident
+  const marketplaceident = "bikesoil";
+
+  const ednTemplate = `{:ident :${marketplaceident}
     :data [
         ${ednDataStrings.join(" ")}
     ]}`;
