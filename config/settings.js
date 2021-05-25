@@ -5,6 +5,7 @@ const idLength = 10;
 const marketPlaceIdent = "bikesoil";
 const outputFileName = "output.edn";
 const separator = ";";
+const csvFileLocation = "./csvFile/data.csv";
 
 module.exports = {
   fileWriteMsg,
@@ -14,4 +15,5 @@ module.exports = {
   marketPlaceIdent,
   outputFileName,
   separator,
+  csvFileLocation,
 };

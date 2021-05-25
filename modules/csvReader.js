@@ -1,12 +1,12 @@
 const csv = require("csv-parser");
 const fs = require("fs");
-const { separator } = require("../config/settings");
+const { separator, csvFileLocation } = require("../config/settings");
 
 let csvData = [];
 
 const csvReader = async () => {
   return new Promise((resolve, reject) => {
-    fs.createReadStream("./csvFile/data.csv")
+    fs.createReadStream(csvFileLocation)
       .pipe(csv({ separator }))
       .on("error", (error) => reject(error))
       .on("data", (row) => {
