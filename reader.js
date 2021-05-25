@@ -48,7 +48,6 @@ function outputFile(contents) {
                               :website "${item.WEBSITE}"
                               :scoreavg ${item.SCOREAVG}}
                  :author #im/ref :user/${user}}]
-
    [[:im.user/id :user/${user}]
     #:im.user{:createdAt #inst "${timestamp}"
               :primaryEmail {:im.email/address "${item.USEREMAIL}"
@@ -58,8 +57,7 @@ function outputFile(contents) {
                         :im.userProfile/displayName "${item.FIRSTNAME} ${
         item.LASTNAME
       }"}
-              :role [:user.role/customer :user.role/provider]}]
-      `,
+              :role [:user.role/customer :user.role/provider]}]`,
     ];
   });
 
