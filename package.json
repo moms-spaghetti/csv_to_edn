@@ -1,0 +1,25 @@
+{
+  "name": "edn-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reader.js",
+  "scripts": {
+    "start": "node reader.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moms-spaghetti/csv_to_edn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moms-spaghetti/csv_to_edn/issues"
+  },
+  "homepage": "https://github.com/moms-spaghetti/csv_to_edn#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "moment": "^2.29.1",
+    "uuidv4": "^6.2.8"
+  }
+}
