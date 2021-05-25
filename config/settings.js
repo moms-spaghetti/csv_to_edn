@@ -1,4 +1,4 @@
-const fileWriteMsg = "file write successful";
+const fileWriteMsg = "edn file write successful";
 const timeFormat = "YYYY-MM-DDTHH:mm:ss";
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const idLength = 10;
