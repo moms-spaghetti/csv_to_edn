@@ -4,7 +4,7 @@
   "description": "",
   "main": "reader.js",
   "scripts": {
-    "start": "node reader.js",
+    "start": "node converter.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
