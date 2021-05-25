@@ -46,7 +46,7 @@ function outputFile(contents) {
                  :scoreavg ${item.SCOREAVG}
 
    [[:im.user/id :user/${user}]
-    #:im.user{:createdAt #inst "${uuidv4()}"
+    #:im.user{:createdAt #inst "${timestamp}"
               :primaryEmail {:im.email/address "${item.USEREMAIL}"
                              :im.email/verified ${userEmailVerified}}
               :profile {:im.userProfile/firstName "${item.FIRSTNAME}"
