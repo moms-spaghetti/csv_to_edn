@@ -1,4 +1,5 @@
 const { characters, idLength } = require("../config/settings");
+const formatName = require("../helpers/formatName");
 
 const userId = (firstName, lastName, userEmail) => {
   var result = [];
@@ -15,8 +16,5 @@ const userId = (firstName, lastName, userEmail) => {
     USERNAME: `${firstName.toLowerCase()}${result.join("")}`,
   };
 };
-
-const formatName = (userDetail) =>
-  userDetail.charAt(0).toUpperCase() + userDetail.slice(1);
 
 module.exports = userId;
