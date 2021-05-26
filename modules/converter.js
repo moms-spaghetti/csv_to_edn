@@ -1,10 +1,14 @@
-const converter = async (ednRow, model, ednTemplate, ednFile, csvReader) => {
+const ednRow = require("./ednRow");
+const ednTemplate = require("./ednTemplate");
+const ednFile = require("./ednFile");
+const csvReader = require("./csvReader");
+
+const converter = async () => {
   let _ednOutput = [];
 
   try {
     _ednOutput = await csvReader()
-      .then((csvData) => model(csvData))
-      .then((data) => ednRow(data))
+      .then((csvData) => ednRow(csvData))
       .then((rows) => ednTemplate(rows));
 
     ednFile(_ednOutput);

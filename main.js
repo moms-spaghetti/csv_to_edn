@@ -1,10 +1,3 @@
-const {
-  ednRow,
-  model,
-  ednTemplate,
-  ednFile,
-  csvReader,
-  converter,
-} = require("./modulesExports");
+const converter = require("./modules/converter");
 
-converter(ednRow, model, ednTemplate, ednFile, csvReader, converter);
+converter();
